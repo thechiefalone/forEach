@@ -1,7 +1,7 @@
-const squares = document.querySelectorAll('div');
+const squares = document.querySelectorAll('.container div');
 console.log(squares);
 
-let random = Math.floor(Math.random() * 9);
+let random = Math.floor(Math.random() * 16);
 console.log(random);
 
 squares.forEach((square, index) => {
@@ -9,12 +9,11 @@ squares.forEach((square, index) => {
   square.addEventListener('click', click);
   if (index == random) {
     square.addEventListener('click', function() {
-      this.style.backgroundColor = 'green';
+      this.style.backgroundImage = 'url("https://source.unsplash.com/random/150x150")';
       alert('Congratulations');
     })
   }
 })
-
 
 let lastClickDiv;
 
